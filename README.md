@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./images/readme-game.gif" />
+</p>
+
 ## Practicum SnowGame
 
 📝Este é um projeto que simula um jogo com técnicas replicadas do vídeo ["Como criar um jogo SIMPLES usando JavaScript e HTML | JavaScript para iniciantes - Tutorial"](https://www.youtube.com/watch?v=r9buAwVBDhA).
