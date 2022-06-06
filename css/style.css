@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  max-width: 1024px;
+  height: 590px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: url("../images/background.png") no-repeat;
+  background-size: cover;
+}
+
+/* Efeito de neve caindo */
+.game-board::after {
+  content: "";
+  background-image: url(../images/snow.gif);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.game-over {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 245px;
+  left: 420px;
+  color: rgb(68, 196, 228);
+  visibility: hidden;
+  margin: 0;
+}
+
+.clouds {
+  width: 300px;
+  top: 10px;
+  position: absolute;
+  animation: clouds-animation 20s infinite linear;
+}
+
+.flag {
+  position: absolute;
+  width: 222px;
+  top: 32px;
+  left: -3px;
+}
+
+.score {
+  position: absolute;
+  left: 10px;
+  top: 199px;
+  border: 5px dashed mediumseagreen;
+  padding: 0 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(39, 60, 156);
+}
+
+.score-points {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+}
+.score-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.sonic {
+  position: absolute;
+  width: 150px;
+  transform: rotate(333deg);
+  bottom: 0px;
+}
+
+.pine {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  right: 0;
+  animation: pipe-animation 1.5s infinite linear;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  40% {
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  60% {
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -200px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -300px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
